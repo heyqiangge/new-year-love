@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新年快乐</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .heart {
+            font-size: 3rem;
+            animation: beat 1.5s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>新年快乐！</h1>
+        <p>宝宝新的一年要一直幸福,常常开心</p>
+        <p>希望zlz新的一年万事顺意,常常顺遂</p>
+        <div class="heart">❤️</div>
+    </div>
+
+    <script>
+        const heart = document.querySelector('.heart');
+        heart.addEventListener('click', () => {
+            window.location.href = 'love.html'; // 跳转到第二个页面
+        });
+    </script>
+</body>
+</html>
